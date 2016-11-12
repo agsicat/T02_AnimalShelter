@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AnimalShelter</string>
+    <string name="existing_name">Existing</string>
+    <string name="new_name">New</string>
 </resources>
