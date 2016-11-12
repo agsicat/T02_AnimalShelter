@@ -26,5 +26,13 @@ public class StartActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        newAnimal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), NewAnimalForm.class);
+                startActivity(intent);
+            }
+        });
     }
 }
