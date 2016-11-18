@@ -23,7 +23,10 @@
         <activity
             android:name=".SingleAnimalView"
             android:label="@string/title_activity_single_animal_view"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-    </application>
+            android:theme="@style/AppTheme.NoActionBar"/>
 
+        <uses-feature
+            android:name="android.hardware.camera2"
+            android:required="true"/>
+    </application>
 </manifest>
