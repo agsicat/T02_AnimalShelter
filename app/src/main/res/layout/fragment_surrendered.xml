@@ -1,16 +1,29 @@
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="cpsc481.t02.animalshelter.SurrenderedFragment">
 
-    <ImageButton
+    <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:id="@+id/imageButton"
+        android:id="@+id/imageView"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:background="@android:drawable/ic_menu_camera" />
+        android:background="@android:drawable/ic_menu_camera"
+        android:clickable="true"
+        android:layout_margin="16dp"/>
 
 
     <TextView
@@ -19,13 +32,16 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/id_type"
         android:id="@+id/IDtype"
-        android:layout_marginLeft="150dp"/>
+        android:layout_marginLeft="150dp"
+        android:layout_alignLeft="@+id/imageView"
+        android:paddingTop="15dp"
+        android:layout_alignTop="@+id/imageView"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tag"
-        android:layout_alignLeft="@id/imageButton"
+        android:layout_alignLeft="@id/imageView"
         android:layout_alignParentRight="true"
         android:layout_below="@id/IDtype"
         android:layout_marginLeft="150dp">
@@ -50,10 +66,11 @@
             />
     </RadioGroup>
     <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
+        android:layout_width="205dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/tag"
         android:id="@+id/numberPosition"
+        android:layout_alignLeft="@+id/imageView"
         android:layout_marginLeft="150dp"
        >
     <EditText
@@ -67,10 +84,11 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/numberPosition"
-        android:id="@+id/namePosition">
+        android:id="@+id/namePosition"
+        android:layout_alignLeft="@+id/imageView">
 
         <EditText
             android:layout_width="match_parent"
@@ -86,6 +104,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/AnimalType"
         android:layout_below="@id/namePosition"
+        android:layout_alignLeft="@+id/imageView"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
        />
 
     <TextView
@@ -95,6 +116,7 @@
         android:text="@string/behavior"
         android:id="@+id/behavior"
         android:layout_below="@+id/AnimalType"
+        android:layout_alignLeft="@+id/imageView"
         />
 
     <CheckBox
@@ -193,3 +215,5 @@
 
 
 </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

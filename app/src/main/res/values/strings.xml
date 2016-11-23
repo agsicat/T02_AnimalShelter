@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">AnimalShelter</string>
-    <string name="existing_name">Existing</string>
-    <string name="new_name">New</string>
+    <string name="app_name">AnimalBase</string>
+    <string name="existing_name">View Existing Animal</string>
+    <string name="new_name">Add New Animal</string>
+    <string name="welcome_msg">Welcome to AnimalBase! \nThe shelter has %1$d %2$s on record.</string>
     <string name="title_activity_new_animal_form">New Animal Form</string>
     <string name="action_save">Save</string>
     <string name="action_cancel">Cancel</string>
