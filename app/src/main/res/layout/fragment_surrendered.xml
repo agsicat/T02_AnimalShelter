@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="ID Type"
+        android:text="@string/id_type"
         android:id="@+id/IDtype"
         android:layout_marginLeft="150dp"
         android:layout_alignLeft="@+id/imageView"
@@ -49,19 +49,19 @@
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tattoo"
+        android:text="@string/tattoo_id"
         android:id="@+id/tattoo"
          />
         <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Microchip"
+        android:text="@string/microchip_id"
         android:id="@+id/microchip"
         />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="System"
+            android:text="@string/system_id"
             android:id="@+id/system"
             />
     </RadioGroup>
@@ -79,7 +79,7 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/idNumber"
-        android:hint="ID Number"
+        android:hint="@string/id_number"
         />
     </android.support.design.widget.TextInputLayout>
 
@@ -95,8 +95,8 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:ems="10"
-            android:id="@+id/Name"
-            android:hint="Name" />
+            android:id="@+id/AnimalName"
+            android:hint="@string/animal_name" />
     </android.support.design.widget.TextInputLayout>
 
     <Spinner
@@ -113,7 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Behavior"
+        android:text="@string/behavior"
         android:id="@+id/behavior"
         android:layout_below="@+id/AnimalType"
         android:layout_alignLeft="@+id/imageView"
@@ -122,7 +122,7 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quiet"
+        android:text="@string/quiet_behavior"
         android:id="@+id/quiet"
         android:layout_alignTop="@+id/loud"
         android:layout_toEndOf="@+id/smart"
@@ -131,16 +131,15 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Slow"
+        android:text="@string/aggressive_behavior"
         android:id="@+id/aggressive"
         android:checked="false"
-        android:layout_above="@+id/shy"
-        android:layout_alignEnd="@+id/behavior" />
+        android:layout_above="@+id/shy" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Loud"
+        android:text="@string/loud_behavior"
         android:id="@+id/loud"
         android:layout_below="@+id/behavior"
         android:layout_alignStart="@+id/affectionate" />
@@ -148,7 +147,7 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Shy"
+        android:text="@string/shy_behavior"
         android:id="@+id/shy"
         android:layout_marginTop="33dp"
         android:layout_below="@+id/quiet"
@@ -157,7 +156,7 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hyper"
+        android:text="@string/hyper_behavior"
         android:id="@+id/hyper"
         android:layout_alignTop="@+id/lazy"
         android:layout_alignStart="@+id/smart" />
@@ -165,7 +164,7 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Affectionate"
+        android:text="@string/affectionate_behavior"
         android:id="@+id/affectionate"
         android:layout_above="@+id/lazy"
         android:layout_alignParentEnd="true"
@@ -174,7 +173,7 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lazy"
+        android:text="@string/lazy_behavior"
         android:id="@+id/lazy"
         android:layout_marginTop="32dp"
         android:layout_below="@+id/shy"
@@ -183,7 +182,7 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Smart"
+        android:text="@string/smart_behavior"
         android:id="@+id/smart"
         android:layout_above="@+id/lazy"
         android:layout_alignStart="@+id/aggressive" />
@@ -191,12 +190,28 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Slow"
+        android:text="@string/slow_behavior"
         android:id="@+id/slow"
         android:layout_alignTop="@+id/hyper"
         android:layout_alignStart="@+id/loud" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/prev_owner_info"
+        android:id="@+id/prevOwnerInfo"
+        android:layout_below="@+id/hyper"
+        />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/PreviousOwnerName"
+        android:hint="@string/prev_owner_name"
+        android:layout_below="@+id/prevOwnerInfo"/>
 
 
 </RelativeLayout>
