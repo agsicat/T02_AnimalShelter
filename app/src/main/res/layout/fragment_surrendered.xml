@@ -23,7 +23,7 @@
         android:layout_alignParentStart="true"
         android:background="@android:drawable/ic_menu_camera"
         android:clickable="true"
-        android:paddingTop="15dp"/>
+        android:layout_margin="16dp"/>
 
 
     <TextView
@@ -33,7 +33,9 @@
         android:text="ID Type"
         android:id="@+id/IDtype"
         android:layout_marginLeft="150dp"
-        android:paddingTop="15dp"/>
+        android:layout_alignLeft="@+id/imageView"
+        android:paddingTop="15dp"
+        android:layout_alignTop="@+id/imageView"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -64,10 +66,11 @@
             />
     </RadioGroup>
     <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
+        android:layout_width="205dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/tag"
         android:id="@+id/numberPosition"
+        android:layout_alignLeft="@+id/imageView"
         android:layout_marginLeft="150dp"
        >
     <EditText
@@ -81,10 +84,11 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/numberPosition"
-        android:id="@+id/namePosition">
+        android:id="@+id/namePosition"
+        android:layout_alignLeft="@+id/imageView">
 
         <EditText
             android:layout_width="match_parent"
@@ -100,6 +104,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/AnimalType"
         android:layout_below="@id/namePosition"
+        android:layout_alignLeft="@+id/imageView"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
        />
 
     <TextView
@@ -109,6 +116,7 @@
         android:text="Behavior"
         android:id="@+id/behavior"
         android:layout_below="@+id/AnimalType"
+        android:layout_alignLeft="@+id/imageView"
         />
 
     <CheckBox

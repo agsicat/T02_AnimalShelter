@@ -9,20 +9,40 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="cpsc481.t02.animalshelter.StartActivity">
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/welcomeMsg"
+        android:layout_marginTop="35dp"
+        android:layout_toRightOf="@+id/welcomeImg"
+        android:textSize="14dp"
+        android:paddingLeft="5dp"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/welcomeImg"
+        android:src="@mipmap/ic_launcher"
+        android:layout_alignLeft="@+id/newButton"
+        android:alpha=".75"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="250dp"
         android:text="@string/new_name"
         android:id="@+id/newButton"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="154dp" />
+        android:layout_centerVertical="true"
+        android:layout_marginTop="154dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/colorPrimaryLite"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
         android:text="@string/existing_name"
         android:id="@+id/existing"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_toRightOf="@+id/newButton"
+        android:layout_alignTop="@+id/newButton"
+        android:backgroundTint="@color/colorPrimaryLite"/>
 </RelativeLayout>

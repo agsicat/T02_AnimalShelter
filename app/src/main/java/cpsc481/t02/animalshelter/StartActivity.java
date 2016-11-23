@@ -5,11 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class StartActivity extends AppCompatActivity {
 
     private Button newAnimal;
     private Button existingAnimal;
+    private int numAnimals;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,12 @@ public class StartActivity extends AppCompatActivity {
 
         newAnimal = (Button)findViewById(R.id.newButton);
         existingAnimal = (Button) findViewById(R.id.existing);
+
+        numAnimals = 1;
+        String animalFmt = (numAnimals == 1) ? "animal" : "animals";
+        String welcomeTxt = String.format(getResources().getString(R.string.welcome_msg), numAnimals, animalFmt);
+        TextView welcomeMsg = (TextView) findViewById(R.id.welcomeMsg);
+        welcomeMsg.setText(welcomeTxt);
 
         existingAnimal.setOnClickListener(new View.OnClickListener() {
             @Override
