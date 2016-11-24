@@ -1,13 +1,201 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cpsc481.t02.animalshelter.AdmittedFragment">
+    tools:context="cpsc481.t02.animalshelter.SurrenderedFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:drawable/ic_menu_camera" />
+
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Admitted Fragment!" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/id_type"
+        android:id="@+id/IDtype"
+        android:layout_marginLeft="150dp"/>
 
-</FrameLayout>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tag"
+        android:layout_alignLeft="@id/imageButton"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/IDtype"
+        android:layout_marginLeft="150dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tattoo_id"
+            android:id="@+id/tattoo"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/microchip_id"
+            android:id="@+id/microchip"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/system_id"
+            android:id="@+id/system"
+            />
+    </RadioGroup>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tag"
+        android:id="@+id/numberPosition"
+        android:layout_marginLeft="150dp"
+        >
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/idNumber"
+            android:hint="@string/id_number"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/numberPosition"
+        android:id="@+id/namePosition">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/Name"
+            android:hint="@string/animal_name" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AnimalType"
+        android:layout_below="@id/namePosition"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/behavior"
+        android:id="@+id/behavior"
+        android:layout_below="@+id/AnimalType"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quiet_behavior"
+        android:id="@+id/quiet"
+        android:layout_alignTop="@+id/loud"
+        android:layout_toEndOf="@+id/smart"
+        android:layout_marginStart="52dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aggressive_behavior"
+        android:id="@+id/aggressive"
+        android:checked="false"
+        android:layout_above="@+id/shy" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loud_behavior"
+        android:id="@+id/loud"
+        android:layout_below="@+id/behavior"
+        android:layout_alignStart="@+id/affectionate" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shy_behavior"
+        android:id="@+id/shy"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/quiet"
+        android:layout_alignStart="@+id/quiet" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hyper_behavior"
+        android:id="@+id/hyper"
+        android:layout_alignTop="@+id/lazy"
+        android:layout_alignStart="@+id/smart" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/affectionate_behavior"
+        android:id="@+id/affectionate"
+        android:layout_above="@+id/lazy"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="18dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lazy_behavior"
+        android:id="@+id/lazy"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/shy"
+        android:layout_alignStart="@+id/shy" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/smart_behavior"
+        android:id="@+id/smart"
+        android:layout_above="@+id/lazy"
+        android:layout_alignStart="@+id/aggressive" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/slow_behavior"
+        android:id="@+id/slow"
+        android:layout_alignTop="@+id/hyper"
+        android:layout_alignStart="@+id/loud" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/emp_info"
+        android:id="@+id/empInfo"
+        android:layout_below="@+id/hyper"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/EmpolyeeName"
+        android:hint="@string/emp_name"
+        android:layout_below="@+id/empInfo"/>
+
+    </RelativeLayout>
+</ScrollView>
+

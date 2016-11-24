@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">AnimalShelter</string>
-    <string name="existing_name">Existing</string>
-    <string name="new_name">New</string>
+    <string name="app_name">AnimalBase</string>
+    <string name="existing_name">View Existing Animal</string>
+    <string name="new_name">Add New Animal</string>
+    <string name="welcome_msg">Welcome to AnimalBase! \nThe shelter has %1$d %2$s on record.</string>
     <string name="title_activity_new_animal_form">New Animal Form</string>
     <string name="action_save">Save</string>
     <string name="action_cancel">Cancel</string>
@@ -9,7 +10,27 @@
     <string name="large_text">
         "Material is the metaphor.\n\n"
     </string>
-     <string-array name="animal_types_array">
+    <string name="id_type">ID Type</string>
+    <string name="tattoo_id">Tattoo</string>
+    <string name="microchip_id">Microchip</string>
+    <string name="system_id">System</string>
+    <string name="id_number">ID Number</string>
+    <string name="animal_name">Name</string>
+    <string name="behavior">Behavior</string>
+    <string name="quiet_behavior">Quiet</string>
+    <string name="aggressive_behavior">Aggressive</string>
+    <string name="loud_behavior">Loud</string>
+    <string name="shy_behavior">Shy</string>
+    <string name="hyper_behavior">Hyper</string>
+    <string name="affectionate_behavior">Affectionate</string>
+    <string name="lazy_behavior">Lazy</string>
+    <string name="smart_behavior">Smart</string>
+    <string name="slow_behavior">Slow</string>
+    <string name="prev_owner_info">Previous Owner Information</string>
+    <string name="prev_owner_name">Previous Owner Name</string>
+    <string name="emp_info">Employee Information for Admission</string>
+    <string name="emp_name">Employee Name</string>
+    <string-array name="animal_types_array">
             <item>Dog</item>
             <item>Cat</item>
             <item>Bird</item>
