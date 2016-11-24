@@ -1,5 +1,6 @@
 package cpsc481.t02.animalshelter;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -78,9 +79,15 @@ public class NewAnimalForm extends AppCompatActivity implements AdmittedFragment
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_cancel) {
+            finish();
         }
+        if(id == R.id.action_save){
+            Intent intent = new Intent(this, SingleAnimalView.class);
+            startActivity(intent);
+            finish();
+        }
+
 
         return super.onOptionsItemSelected(item);
     }
