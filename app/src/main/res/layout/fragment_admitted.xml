@@ -54,6 +54,7 @@
             android:id="@+id/system"
             />
     </RadioGroup>
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -89,9 +90,14 @@
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/ShelterStatus"
+        android:layout_below="@id/namePosition" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/AnimalType"
-        android:layout_below="@id/namePosition"
-        />
+        android:layout_below="@id/ShelterStatus" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -184,17 +190,25 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/emp_info"
         android:id="@+id/empInfo"
-        android:layout_below="@+id/hyper"
-        />
+        android:layout_below="@+id/hyper" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
         android:ems="10"
-        android:id="@+id/EmpolyeeName"
-        android:hint="@string/emp_name"
+        android:id="@+id/contactNameEmp"
+        android:hint="@string/contact_name_emp"
         android:layout_below="@+id/empInfo"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/locationFound"
+        android:hint="@string/locationFound"
+        android:layout_below="@+id/contactNameEmp"/>
 
     </RelativeLayout>
 </ScrollView>
