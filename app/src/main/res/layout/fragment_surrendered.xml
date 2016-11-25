@@ -7,7 +7,6 @@
     android:descendantFocusability="beforeDescendants"
     android:focusableInTouchMode="true" >
 
-
 <ScrollView
     android:layout_width="fill_parent"
     android:layout_height="1000dp"
@@ -37,18 +36,19 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/id_type"
-        android:id="@+id/IDtype"
+        android:id="@+id/id_type"
         android:layout_marginLeft="6dp"
         android:layout_toRightOf="@+id/imageView"
-        android:layout_alignTop="@+id/imageView"/>
+        android:layout_alignTop="@+id/imageView"
+        android:textColor="@color/colorPrimary"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tag"
-        android:layout_alignLeft="@id/IDtype"
+        android:layout_alignLeft="@id/id_type"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/IDtype">
+        android:layout_below="@id/id_type">
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -69,13 +69,14 @@
             android:id="@+id/system"
             />
     </RadioGroup>
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tag"
         android:id="@+id/numberPosition"
         android:paddingTop="5dp"
-        android:layout_alignLeft="@+id/IDtype"
+        android:layout_alignLeft="@+id/id_type"
         android:layout_marginRight="16dp"
        >
     <EditText
@@ -108,8 +109,16 @@
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/AnimalType"
+        android:id="@+id/ShelterStatus"
         android:layout_below="@id/namePosition"
+        android:layout_alignLeft="@+id/imageView"
+        android:paddingTop="15dp" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AnimalType"
+        android:layout_below="@id/ShelterStatus"
         android:layout_alignLeft="@+id/imageView"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
@@ -123,6 +132,9 @@
         android:id="@+id/behavior"
         android:layout_below="@+id/AnimalType"
         android:layout_alignLeft="@+id/imageView"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/colorPrimary"
         />
 
     <CheckBox
@@ -211,14 +223,15 @@
         android:layout_below="@+id/hyper"
         android:layout_alignStart="@id/imageView"
         android:textColor="@color/colorPrimary"
-        android:paddingTop="15dp"
+        android:paddingTop="25dp"
         />
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/prevOwnerInfo"
-        android:id="@+id/PreviousOwnerName"
+        android:id="@+id/contactNamePrevOwner"
+        android:hint="@string/contact_name_prev_owner"
         android:layout_alignLeft="@+id/imageView"
         android:layout_marginRight="16dp"
         android:paddingTop="5dp">
@@ -227,10 +240,43 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:ems="10"
-            android:hint="@string/prev_owner_name" />
+            android:ems="10" />
     </android.support.design.widget.TextInputLayout>
 
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contactNamePrevOwner"
+        android:id="@+id/addressPrevOwner"
+        android:hint="@string/address_prev_owner"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_marginRight="16dp"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addressPrevOwner"
+        android:id="@+id/phoneNumberPrevOwner"
+        android:hint="@string/phone_number_prev_owner"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_marginRight="16dp"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10" />
+    </android.support.design.widget.TextInputLayout>
 
 </RelativeLayout>
 </ScrollView>

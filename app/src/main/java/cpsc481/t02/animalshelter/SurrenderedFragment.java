@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -13,9 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.content.Intent;
@@ -32,8 +28,10 @@ import java.io.ByteArrayOutputStream;
  */
 public class SurrenderedFragment extends Fragment {
 
+    private Spinner ShelterStatus_Surrendered;
+    private Spinner AnimalType_Surrendered;
+
     static final int REQUEST_IMAGE_CAPTURE = 1;
-    private Spinner AnimalType;
     private ImageView imgView;
 
     private OnFragmentInteractionListener mListener;
@@ -72,12 +70,18 @@ public class SurrenderedFragment extends Fragment {
         // Inflate the layout for this fragment
         View currentView =  inflater.inflate(R.layout.fragment_surrendered, container, false);
 
-        AnimalType = (Spinner) currentView.findViewById(R.id.AnimalType);
 
-        ArrayAdapter<String> spinnerAdapter;
-        spinnerAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.animal_types_array));
-        AnimalType.setAdapter(spinnerAdapter);
+        //Dropdown selections for Shelter Status
+        ShelterStatus_Surrendered = (Spinner) currentView.findViewById(R.id.ShelterStatus);
+        ArrayAdapter<String> spinnerAdapter_ShelterStatus_Surrendered = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.shelter_status_array));
+        ShelterStatus_Surrendered.setAdapter(spinnerAdapter_ShelterStatus_Surrendered);
 
+        //Dropdown selections for Animal Type
+        AnimalType_Surrendered = (Spinner) currentView.findViewById(R.id.AnimalType);
+        ArrayAdapter<String> spinnerAdapter_AnimalType_Surrendered = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.animal_types_array));
+        AnimalType_Surrendered.setAdapter(spinnerAdapter_AnimalType_Surrendered);
+
+        //Camera
         imgView = (ImageView) currentView.findViewById(R.id.imageView);
         imgView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,6 +91,7 @@ public class SurrenderedFragment extends Fragment {
                 startActivityForResult(cameraIntent, REQUEST_IMAGE_CAPTURE);
             }
         });
+
         return currentView;
     }
 

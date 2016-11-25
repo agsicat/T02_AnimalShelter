@@ -30,7 +30,16 @@
     <string name="prev_owner_info">Previous Owner Information</string>
     <string name="prev_owner_name">Previous Owner Name</string>
     <string name="emp_info">Employee Information for Admission</string>
-    <string name="emp_name">Employee Name</string>
+    <string name="contact_name_emp">Contact Name</string>
+    <string name="locationFound">Location Found</string>
+    <string name="contact_name_prev_owner">Contact Name</string>
+    <string name="address_prev_owner">Address</string>
+    <string name="phone_number_prev_owner">Phone Number</string>
+    <string-array name="shelter_status_array">
+        <item>Admitted</item>
+        <item>Surrendered</item>
+        <item>Adopted</item>
+    </string-array>
     <string-array name="animal_types_array">
             <item>Dog</item>
             <item>Cat</item>
@@ -38,4 +47,5 @@
             <item>Reptile</item>
             <item>Rabbit</item>
         </string-array>
+
 </resources>
