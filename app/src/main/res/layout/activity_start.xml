@@ -12,11 +12,22 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/welcomeMsg"
+        android:id="@+id/welcome"
         android:layout_marginTop="35dp"
         android:layout_toRightOf="@+id/welcomeImg"
+        android:textSize="17dp"
+        android:paddingLeft="5dp"
+        android:text="@string/welcome"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcomeMsg"
+        android:layout_alignStart="@+id/welcome"
+        android:layout_below="@+id/welcome"
         android:textSize="14dp"
-        android:paddingLeft="5dp"/>
+        android:padding="5dp"/>
 
     <ImageView
         android:layout_width="100dp"
