@@ -32,19 +32,17 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/id_type"
         android:id="@+id/IDtype"
-        android:layout_marginLeft="150dp"
-        android:layout_alignLeft="@+id/imageView"
-        android:paddingTop="15dp"
+        android:layout_marginLeft="6dp"
+        android:layout_toRightOf="@+id/imageView"
         android:layout_alignTop="@+id/imageView"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tag"
-        android:layout_alignLeft="@id/imageView"
+        android:layout_alignLeft="@id/IDtype"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/IDtype"
-        android:layout_marginLeft="150dp">
+        android:layout_below="@id/IDtype">
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -66,12 +64,13 @@
             />
     </RadioGroup>
     <android.support.design.widget.TextInputLayout
-        android:layout_width="205dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tag"
         android:id="@+id/numberPosition"
-        android:layout_alignLeft="@+id/imageView"
-        android:layout_marginLeft="150dp"
+        android:paddingTop="5dp"
+        android:layout_alignLeft="@+id/IDtype"
+        android:layout_marginRight="16dp"
        >
     <EditText
         android:layout_width="wrap_content"
@@ -84,11 +83,12 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:layout_width="330dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/numberPosition"
         android:id="@+id/namePosition"
-        android:layout_alignLeft="@+id/imageView">
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_marginRight="16dp">
 
         <EditText
             android:layout_width="match_parent"
@@ -134,7 +134,8 @@
         android:text="@string/aggressive_behavior"
         android:id="@+id/aggressive"
         android:checked="false"
-        android:layout_above="@+id/shy" />
+        android:layout_above="@+id/shy"
+        android:layout_alignLeft="@+id/imageView"/>
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -202,6 +203,9 @@
         android:text="@string/prev_owner_info"
         android:id="@+id/prevOwnerInfo"
         android:layout_below="@+id/hyper"
+        android:layout_alignStart="@id/imageView"
+        android:textColor="@color/colorPrimary"
+        android:paddingTop="15dp"
         />
 
     <EditText
@@ -211,9 +215,10 @@
         android:ems="10"
         android:id="@+id/PreviousOwnerName"
         android:hint="@string/prev_owner_name"
-        android:layout_below="@+id/prevOwnerInfo"/>
+        android:layout_below="@+id/prevOwnerInfo"
+        android:layout_alignStart="@id/imageView"/>
 
 
 </RelativeLayout>
-    </LinearLayout>
+</LinearLayout>
 </ScrollView>
