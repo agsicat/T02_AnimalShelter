@@ -18,13 +18,15 @@
         android:layout_height="1000dp"
         android:orientation="vertical">
 
-    <ImageButton
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:id="@+id/imageButton"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:background="@android:drawable/ic_menu_camera" />
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:background="@android:drawable/ic_menu_camera"
+            android:clickable="true"
+            android:layout_margin="16dp"/>
 
 
     <TextView
@@ -39,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tag"
-        android:layout_alignLeft="@id/imageButton"
+        android:layout_alignLeft="@id/imageView"
         android:layout_alignParentRight="true"
         android:layout_below="@id/IDtype"
         android:layout_marginLeft="150dp">
@@ -63,6 +65,7 @@
             android:id="@+id/system"
             />
     </RadioGroup>
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -98,9 +101,14 @@
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/ShelterStatus"
+        android:layout_below="@id/namePosition" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/AnimalType"
-        android:layout_below="@id/namePosition"
-        />
+        android:layout_below="@id/ShelterStatus" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -193,17 +201,25 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/emp_info"
         android:id="@+id/empInfo"
-        android:layout_below="@+id/hyper"
-        />
+        android:layout_below="@+id/hyper" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
         android:ems="10"
-        android:id="@+id/EmpolyeeName"
-        android:hint="@string/emp_name"
+        android:id="@+id/contactNameEmp"
+        android:hint="@string/contact_name_emp"
         android:layout_below="@+id/empInfo"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/locationFound"
+        android:hint="@string/locationFound"
+        android:layout_below="@+id/contactNameEmp"/>
 
     </RelativeLayout>
 </ScrollView>
