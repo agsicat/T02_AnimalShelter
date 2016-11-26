@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AnimalShelter.iml" filepath="$PROJECT_DIR$/AnimalShelter.iml" />
       <module fileurl="file://$PROJECT_DIR$/T02_AnimalShelter.iml" filepath="$PROJECT_DIR$/T02_AnimalShelter.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

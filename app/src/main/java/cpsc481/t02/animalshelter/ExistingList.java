@@ -188,6 +188,7 @@ public class ExistingList extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), SingleAnimalView.class);
                 intent.putExtra("AnimalName", item.getName());
                 intent.putExtra("AnimalNumber", item.getNumber());
+                intent.putExtra("SurrAdd", "Admitted");
                 startActivity(intent);
 
             }

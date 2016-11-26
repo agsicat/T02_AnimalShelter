@@ -36,6 +36,8 @@ public class SurrenderedFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
+    private Activity activity;
+
     public SurrenderedFragment() {
         // Required empty public constructor
     }
@@ -118,11 +120,13 @@ public class SurrenderedFragment extends Fragment {
         super.onAttach(context);
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
+            activity = (Activity) context;
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }
     }
+
 
     @Override
     public void onDetach() {
@@ -145,4 +149,5 @@ public class SurrenderedFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
 }
