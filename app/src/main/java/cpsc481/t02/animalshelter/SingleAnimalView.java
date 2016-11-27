@@ -32,12 +32,25 @@ public class SingleAnimalView extends AppCompatActivity {
         TextView behavior = (TextView) findViewById(R.id.single_behavior);
         TextView contactName = (TextView) findViewById(R.id.single_contactname);
         TextView contactAddr = (TextView) findViewById(R.id.single_contactaddr);
-        TextView contactPhone = (TextView) findViewById(R.id.single_contactphone);
+        TextView contactPhoneNum = (TextView) findViewById(R.id.single_contactphone);
+
+        TextView contactInfo = (TextView) findViewById(R.id.prevOwnerInfo);
+        TextView contactPhone = (TextView) findViewById(R.id.contact_phone);
+        TextView contactLocation = (TextView) findViewById(R.id.contact_address);
 
         Intent intent = getIntent();
         String name = intent.getStringExtra("AnimalName");
         String number = intent.getStringExtra("AnimalNumber");
         String surrAdd = intent.getStringExtra("SurrAdd");
+
+        if (surrAdd.equals("Admitted")) {
+            contactInfo.setText("Employee Information for Admission");
+            contactLocation.setText("Location Found");
+            contactPhone.setVisibility(View.GONE);
+            contactPhoneNum.setVisibility(View.GONE);
+        }
+        else
+            contactPhoneNum.setText("403-555-5555");
 
         tag.setText(number);
         surradd.setText(surrAdd);
@@ -47,7 +60,6 @@ public class SingleAnimalView extends AppCompatActivity {
         behavior.setText("Aggressive, Quiet, Hyper");
         contactName.setText("Sample Name");
         contactAddr.setText("2500 University Drive NE");
-        contactPhone.setText("403-555-5555");
 
 
         getSupportActionBar().setTitle(name);
