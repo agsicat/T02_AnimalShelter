@@ -16,73 +16,203 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/nyan"
-        android:id="@+id/single_picture"/>
+        android:id="@+id/single_picture"
+        android:layout_margin="16dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:layout_toRightOf="@id/single_picture"
+        android:text="@string/admission_type"
+        android:id="@+id/admission_type"
+        android:textSize="16dp"
+        android:layout_marginLeft="6dp"
+        android:layout_toRightOf="@+id/single_picture"
+        android:layout_alignTop="@+id/single_picture"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/admission_type"
+        android:layout_toRightOf="@+id/admission_type"
         android:text="Surrendered"
+        android:layout_marginLeft="@dimen/text_margin"
         android:id="@+id/single_surroradd"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/single_picture"
-        android:layout_margin="@dimen/text_margin"
-        android:layout_below="@id/single_surroradd"
-        android:text="Type"
+        android:id="@+id/id_type"
+        android:text="@string/id_type"
+        android:layout_below="@+id/admission_type"
+        android:layout_marginTop="6dp"
+        android:textSize="16dp"
+        android:layout_alignLeft="@+id/admission_type"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/id_type"
+        android:layout_alignBaseline="@+id/id_type"
+        android:layout_marginLeft="@dimen/text_margin"
+        android:text="@string/id_type"
         android:id="@+id/single_type"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/single_picture"
-        android:layout_margin="@dimen/text_margin"
-        android:layout_below="@id/single_type"
-        android:text="Tag"
-        android:id="@+id/single_tag"/>
+        android:id="@+id/idNumber"
+        android:text="@string/id_number"
+        android:layout_below="@+id/id_type"
+        android:textSize="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_alignLeft="@+id/admission_type"
+        android:textColor="@color/colorPrimary"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tag"
+        android:id="@+id/single_tag"
+        android:layout_toRightOf="@+id/idNumber"
+        android:layout_alignBaseline="@+id/idNumber"
+        android:layout_marginLeft="@dimen/text_margin"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:layout_toRightOf="@id/single_picture"
-        android:layout_below="@id/single_tag"
+        android:id="@+id/shelter_status"
+        android:text="@string/shelter_status"
+        android:textSize="16dp"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/idNumber"
+        android:layout_alignLeft="@+id/admission_type"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/shelter_status"
+        android:layout_alignBaseline="@id/shelter_status"
+        android:layout_below="@+id/idNumber"
+        android:layout_marginLeft="@dimen/text_margin"
         android:text="Status"
         android:id="@+id/single_status"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="Animal Type"
-        android:layout_below="@id/single_status"
+        android:id="@+id/animal_type"
+        android:text="@string/animal_type"
+        android:textSize="16dp"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/single_status"
+        android:layout_alignLeft="@+id/admission_type"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/text_margin"
+        android:text="@string/animal_type"
+        android:layout_toRightOf="@+id/animal_type"
+        android:layout_alignBaseline="@+id/animal_type"
         android:id="@+id/single_animaltype"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:layout_below="@id/single_animaltype"
-        android:text="Behavior"
-        android:id="@+id/single_behavior"/>
+        android:id="@+id/behavior"
+        android:text="@string/behavior"
+        android:layout_below="@+id/animal_type"
+        android:textSize="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_alignLeft="@+id/single_picture"
+        android:textColor="@color/colorPrimary"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:layout_below="@id/single_behavior"
-        android:text="Contact name"
+        android:layout_toRightOf="@id/behavior"
+        android:layout_alignBaseline="@+id/behavior"
+        android:layout_marginLeft="@dimen/text_margin"
+        android:text="@string/behavior"
+        android:id="@+id/single_behavior"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/behavior"
+        android:layout_marginTop="12dp"
+        android:layout_alignLeft="@id/single_picture"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorPrimaryLite"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/prevOwnerInfo"
+        android:text="@string/prev_owner_info"
+        android:layout_below="@+id/single_behavior"
+        android:textSize="16dp"
+        android:paddingTop="25dp"
+        android:layout_alignLeft="@+id/single_picture"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/single_picture"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/prevOwnerInfo"
+        android:text="@string/contact_name_prev_owner"
+        android:id="@+id/contact_name"
+        android:textColor="@color/colorPrimaryDark"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/contact_name"
+        android:layout_toRightOf="@+id/contact_name"
+        android:text="@string/contact_name_prev_owner"
+        android:layout_marginLeft="@dimen/text_margin"
         android:id="@+id/single_contactname"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:layout_below="@id/single_contactname"
-        android:text="Contact name"
+        android:layout_alignLeft="@+id/single_picture"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/contact_name"
+        android:text="@string/address_prev_owner"
+        android:id="@+id/contact_address"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/contact_address"
+        android:layout_toRightOf="@id/contact_address"
+        android:layout_marginLeft="@dimen/text_margin"
+        android:text="@string/address_prev_owner"
+        android:id="@+id/single_contactaddr"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/single_picture"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/contact_address"
+        android:text="@string/phone_number_prev_owner"
+        android:id="@+id/contact_phone"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/contact_phone"
+        android:layout_toRightOf="@id/contact_phone"
+        android:layout_marginLeft="@dimen/text_margin"
+        android:text="@string/phone_number_prev_owner"
         android:id="@+id/single_contactphone"/>
 
 </RelativeLayout>
