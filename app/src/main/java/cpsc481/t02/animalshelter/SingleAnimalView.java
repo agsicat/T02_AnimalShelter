@@ -31,6 +31,7 @@ public class SingleAnimalView extends AppCompatActivity {
         TextView animalType = (TextView) findViewById(R.id.single_animaltype);
         TextView behavior = (TextView) findViewById(R.id.single_behavior);
         TextView contactName = (TextView) findViewById(R.id.single_contactname);
+        TextView contactAddr = (TextView) findViewById(R.id.single_contactaddr);
         TextView contactPhone = (TextView) findViewById(R.id.single_contactphone);
 
         Intent intent = getIntent();
@@ -38,14 +39,15 @@ public class SingleAnimalView extends AppCompatActivity {
         String number = intent.getStringExtra("AnimalNumber");
         String surrAdd = intent.getStringExtra("SurrAdd");
 
-        tag.setText("Tag Number: "+number);
-        surradd.setText("Admission Type: "+surrAdd);
-        type.setText("Chip Type: Microchip");
-        status.setText("Animal Status: Admitted");
-        animalType.setText("Animal Type: Dog");
-        behavior.setText("Animal Behavior: Aggressive, Quiet, Hyper");
-        contactName.setText("Contact Name: Sample Name");
-        contactPhone.setText("Contact Phone: 403-555-5555");
+        tag.setText(number);
+        surradd.setText(surrAdd);
+        type.setText("Microchip");
+        status.setText("Admitted");
+        animalType.setText("Dog");
+        behavior.setText("Aggressive, Quiet, Hyper");
+        contactName.setText("Sample Name");
+        contactAddr.setText("2500 University Drive NE");
+        contactPhone.setText("403-555-5555");
 
 
         getSupportActionBar().setTitle(name);

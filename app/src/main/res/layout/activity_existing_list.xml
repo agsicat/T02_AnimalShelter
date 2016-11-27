@@ -4,13 +4,21 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    tools:context="cpsc481.t02.animalshelter.ExistingList">
+    tools:context="cpsc481.t02.animalshelter.ExistingList"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
 
     <!-- Editext for Search -->
-    <EditText android:id="@+id/searchbar"
+    <EditText
+        android:id="@+id/searchbar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="Search existing animals..."
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:drawableRight="@drawable/ic_search"
        />
 
     <ListView
