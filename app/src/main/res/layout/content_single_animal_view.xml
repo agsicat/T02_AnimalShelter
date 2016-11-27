@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:text="@string/admission_type"
         android:id="@+id/admission_type"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="16dp"
         android:layout_marginLeft="6dp"
         android:layout_toRightOf="@+id/single_picture"
         android:layout_alignTop="@+id/single_picture"
@@ -46,7 +46,7 @@
         android:text="@string/id_type"
         android:layout_below="@+id/admission_type"
         android:layout_marginTop="6dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="16dp"
         android:layout_alignLeft="@+id/admission_type"
         android:textColor="@color/colorPrimary"/>
 
@@ -65,7 +65,7 @@
         android:id="@+id/idNumber"
         android:text="@string/id_number"
         android:layout_below="@+id/id_type"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="16dp"
         android:layout_marginTop="6dp"
         android:layout_alignLeft="@+id/admission_type"
         android:textColor="@color/colorPrimary"/>
@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/shelter_status"
         android:text="@string/shelter_status"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="16dp"
         android:layout_marginTop="6dp"
         android:textColor="@color/colorPrimary"
         android:layout_below="@+id/idNumber"
@@ -104,7 +104,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/animal_type"
         android:text="@string/animal_type"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="16dp"
         android:layout_marginTop="6dp"
         android:textColor="@color/colorPrimary"
         android:layout_below="@+id/single_status"
@@ -125,7 +125,7 @@
         android:id="@+id/behavior"
         android:text="@string/behavior"
         android:layout_below="@+id/animal_type"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="16dp"
         android:layout_marginTop="6dp"
         android:layout_alignLeft="@+id/single_picture"
         android:textColor="@color/colorPrimary"/>
@@ -139,13 +139,22 @@
         android:text="@string/behavior"
         android:id="@+id/single_behavior"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/behavior"
+        android:layout_marginTop="12dp"
+        android:layout_alignLeft="@id/single_picture"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorPrimaryLite"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/prevOwnerInfo"
         android:text="@string/prev_owner_info"
         android:layout_below="@+id/single_behavior"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="16dp"
         android:paddingTop="25dp"
         android:layout_alignLeft="@+id/single_picture"
         android:textColor="@color/colorPrimary"/>
