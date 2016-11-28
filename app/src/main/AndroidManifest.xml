@@ -17,12 +17,14 @@
         </activity>
         <activity
             android:name=".ExistingList"
-            android:parentActivityName=".StartActivity"/>
+            android:parentActivityName=".StartActivity"
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".NewAnimalForm"
             android:label="@string/title_activity_new_animal_form"
             android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".StartActivity"/>
+            android:parentActivityName=".StartActivity"
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".SingleAnimalView"
             android:label="@string/title_activity_single_animal_view"
@@ -32,5 +34,11 @@
         <uses-feature
             android:name="android.hardware.camera2"
             android:required="true"/>
+
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+        App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 </manifest>

@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="1000dp"
     android:orientation="vertical"
-    tools:context="cpsc481.t02.animalshelter.AdmittedFragment" >
+    tools:context="cpsc481.t02.animalshelter.AdmittedFragment"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true" >
 
 
     <ScrollView
@@ -18,106 +20,122 @@
         android:layout_height="1000dp"
         android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:id="@+id/imageView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:background="@android:drawable/ic_menu_camera"
-        android:clickable="true"
-        android:layout_margin="16dp"/>
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:background="@android:drawable/ic_menu_camera"
+            android:clickable="true"
+            android:layout_margin="16dp"/>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/id_type"
-        android:id="@+id/IDtype"
-        android:layout_marginLeft="150dp"/>
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tag"
-        android:layout_alignLeft="@id/imageView"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/IDtype"
-        android:layout_marginLeft="150dp">
-
-        <RadioButton
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tattoo_id"
-            android:id="@+id/tattoo"
-            />
-        <RadioButton
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/id_type"
+            android:id="@+id/id_type"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_alignTop="@+id/imageView"
+            android:textColor="@color/colorPrimary"/>
+
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/microchip_id"
-            android:id="@+id/microchip"
-            />
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/system_id"
-            android:id="@+id/system"
-            />
-    </RadioGroup>
+            android:id="@+id/tag"
+            android:layout_alignLeft="@id/id_type"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/id_type">
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tag"
-        android:id="@+id/numberPosition"
-        android:layout_marginLeft="150dp"
-        >
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/idNumber"
-            android:hint="@string/id_number"
-            />
-    </android.support.design.widget.TextInputLayout>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tattoo_id"
+                android:id="@+id/tattoo"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/microchip_id"
+                android:id="@+id/microchip"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/system_id"
+                android:id="@+id/system"
+                />
+        </RadioGroup>
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/numberPosition"
-        android:id="@+id/namePosition">
-
-        <EditText
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:ems="10"
-            android:id="@+id/Name"
-            android:hint="@string/animal_name" />
-    </android.support.design.widget.TextInputLayout>
+            android:layout_below="@id/tag"
+            android:id="@+id/numberPosition"
+            android:paddingTop="5dp"
+            android:layout_alignLeft="@+id/id_type"
+            android:layout_marginRight="16dp"
+            >
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/idNumber"
+                android:hint="@string/id_number"
+                />
+        </android.support.design.widget.TextInputLayout>
 
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/ShelterStatus"
-        android:layout_below="@id/namePosition" />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/numberPosition"
+            android:id="@+id/namePosition"
+            android:layout_alignLeft="@+id/imageView"
+            android:layout_marginRight="16dp">
 
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/AnimalType"
-        android:layout_below="@id/ShelterStatus" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/AnimalName"
+                android:hint="@string/animal_name" />
+        </android.support.design.widget.TextInputLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/behavior"
-        android:id="@+id/behavior"
-        android:layout_below="@+id/AnimalType"
-        />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ShelterStatus"
+            android:layout_below="@id/namePosition"
+            android:layout_alignLeft="@+id/imageView"
+            android:paddingTop="15dp" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/AnimalType"
+            android:layout_below="@id/ShelterStatus"
+            android:layout_alignLeft="@+id/imageView"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/behavior"
+            android:id="@+id/behavior"
+            android:layout_below="@+id/AnimalType"
+            android:layout_alignLeft="@+id/imageView"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/colorPrimary"
+            />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -128,13 +146,14 @@
         android:layout_toEndOf="@+id/smart"
         android:layout_marginStart="52dp" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/aggressive_behavior"
-        android:id="@+id/aggressive"
-        android:checked="false"
-        android:layout_above="@+id/shy" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aggressive_behavior"
+            android:id="@+id/aggressive"
+            android:checked="false"
+            android:layout_above="@+id/shy"
+            android:layout_alignLeft="@+id/imageView"/>
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -161,14 +180,14 @@
         android:layout_alignTop="@+id/lazy"
         android:layout_alignStart="@+id/smart" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/affectionate_behavior"
-        android:id="@+id/affectionate"
-        android:layout_above="@+id/lazy"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="18dp" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/affectionate_behavior"
+            android:id="@+id/affectionate"
+            android:layout_above="@+id/lazy"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="18dp" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -201,25 +220,46 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/emp_info"
         android:id="@+id/empInfo"
-        android:layout_below="@+id/hyper" />
+        android:layout_below="@+id/hyper"
+        android:layout_alignStart="@id/imageView"
+        android:textColor="@color/colorPrimary"
+        android:paddingTop="25dp" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:ems="10"
-        android:id="@+id/contactNameEmp"
-        android:hint="@string/contact_name_emp"
-        android:layout_below="@+id/empInfo"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/empInfo"
+            android:id="@+id/contactNameEmp"
+            android:hint="@string/contact_name_emp"
+            android:layout_alignLeft="@+id/imageView"
+            android:layout_marginRight="16dp"
+            android:paddingTop="5dp">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:ems="10"
-        android:id="@+id/locationFound"
-        android:hint="@string/locationFound"
-        android:layout_below="@+id/contactNameEmp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"  />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/locationFound"
+            android:hint="@string/locationFound"
+            android:layout_alignLeft="@+id/imageView"
+            android:layout_marginRight="16dp"
+            android:layout_below="@+id/contactNameEmp"
+            android:paddingTop="5dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10" />
+
+        </android.support.design.widget.TextInputLayout>
 
     </RelativeLayout>
     </ScrollView>

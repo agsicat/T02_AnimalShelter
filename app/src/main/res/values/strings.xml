@@ -2,7 +2,8 @@
     <string name="app_name">AnimalBase</string>
     <string name="existing_name">View Existing Animal</string>
     <string name="new_name">Add New Animal</string>
-    <string name="welcome_msg">Welcome to AnimalBase! \nThe shelter has %1$d %2$s on record.</string>
+    <string name="welcome">Welcome to AnimalBase!</string>
+    <string name="welcome_msg">The shelter has %1$d %2$s on record.</string>
     <string name="title_activity_new_animal_form">New Animal Form</string>
     <string name="action_save">Save</string>
     <string name="action_cancel">Cancel</string>
@@ -15,6 +16,7 @@
     <string name="microchip_id">Microchip</string>
     <string name="system_id">System</string>
     <string name="id_number">ID Number</string>
+    <string name="tag">Tag</string>
     <string name="animal_name">Name</string>
     <string name="behavior">Behavior</string>
     <string name="quiet_behavior">Quiet</string>
@@ -34,11 +36,14 @@
     <string name="contact_name_prev_owner">Contact Name</string>
     <string name="address_prev_owner">Address</string>
     <string name="phone_number_prev_owner">Phone Number</string>
+    <string name="admission_type">Admission Type</string>
+    <string name="shelter_status">Shelter Status</string>
     <string-array name="shelter_status_array">
         <item>Admitted</item>
         <item>Surrendered</item>
         <item>Adopted</item>
     </string-array>
+    <string name="animal_type">Animal Type</string>
     <string-array name="animal_types_array">
             <item>Dog</item>
             <item>Cat</item>

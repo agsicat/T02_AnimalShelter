@@ -3,8 +3,6 @@ package cpsc481.t02.animalshelter;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -14,13 +12,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 
-import android.widget.TextView;
 
 public class NewAnimalForm extends AppCompatActivity implements AdmittedFragment.OnFragmentInteractionListener, SurrenderedFragment.OnFragmentInteractionListener {
 
@@ -83,9 +77,24 @@ public class NewAnimalForm extends AppCompatActivity implements AdmittedFragment
             finish();
         }
         if(id == R.id.action_save){
-            Intent intent = new Intent(this, SingleAnimalView.class);
-            startActivity(intent);
-            finish();
+            int pos = mViewPager.getCurrentItem();
+            Fragment activeFragment = mSectionsPagerAdapter.getItem(pos);
+            if(pos ==0 ){
+                Intent intent = new Intent(this, SingleAnimalView.class);
+                intent.putExtra("AnimalName", "Dog05");
+                intent.putExtra("AnimalNumber", "0000123");
+                intent.putExtra("SurrAdd", "Admitted");
+                startActivity(intent);
+                finish();
+            }
+            else{
+                Intent intent = new Intent(this, SingleAnimalView.class);
+                intent.putExtra("AnimalName", "Dog05");
+                intent.putExtra("AnimalNumber", "00001234");
+                intent.putExtra("SurrAdd", "Surrendered");
+                startActivity(intent);
+                finish();
+            }
         }
 
 
