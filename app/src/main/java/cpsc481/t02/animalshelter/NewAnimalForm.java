@@ -81,8 +81,8 @@ public class NewAnimalForm extends AppCompatActivity implements AdmittedFragment
             Fragment activeFragment = mSectionsPagerAdapter.getItem(pos);
             if(pos ==0 ){
                 Intent intent = new Intent(this, SingleAnimalView.class);
-                intent.putExtra("AnimalName", "Dog05");
-                intent.putExtra("AnimalNumber", "0000123");
+                intent.putExtra("AnimalName", "Dog 01");
+                intent.putExtra("AnimalNumber", "0000007");
                 intent.putExtra("SurrAdd", "Admitted");
                 startActivity(intent);
                 finish();
