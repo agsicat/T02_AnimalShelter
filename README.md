@@ -1,5 +1,5 @@
 # T02_AnimalShelter - AnimalBase Android App
-# Create by Nicholas Brons, Angela Grace Sicat, Maria Mamaclay
+Created by Nicholas Brons, Angela Grace Sicat, Maria Mamaclay
 
 This is a prototype Android application for our Human Computer Interactions course. 
 
